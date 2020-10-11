@@ -30,7 +30,7 @@ const admin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     next()
   } else {
-    throw new Error('Not authorized is an Admin')
+    throw new Error('Not authorized as an Admin')
   }
 }
 
