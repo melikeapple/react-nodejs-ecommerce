@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { PayPalButton } from 'react-paypal-button-v2'
-import PaypalExpressBtn from 'react-paypal-express-checkout'
 import { Link } from 'react-router-dom'
 import { Col, Row, Card, Image, ListGroup } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -182,15 +181,6 @@ export const OrderScreen = ({ match }) => {
                         }}
                         onSuccess={successPaymentHandler}
                       />
-                      {/* <PaypalExpressBtn
-                        client={{
-                          sandbox:
-                            'AdykfIdc1s5K814l13O1c0xwzt_iKCYhF7p0ew1oMQJhOUG6ql1_fKYbfu56xA85wuCJmSkmba1l30tQ',
-                          production: 'YOUR-PRODUCTION-APP-ID',
-                        }}
-                        currency={'USD'}
-                        total={order.totalPrice}
-                      /> */}
                     </>
                   )}
                 </ListGroup.Item>
