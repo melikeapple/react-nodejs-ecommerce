@@ -57,14 +57,6 @@ const createProduct = asyncHandler(async (req, res) => {
 
   const createdProduct = await product.save()
   res.status(201).json(createdProduct)
-
-  if (product) {
-    await product.remove()
-    res.json({ message: 'Product removed' })
-  } else {
-    res.status(404)
-    throw new Error('Product Not Found')
-  }
 })
 
 //@desc Update  product
