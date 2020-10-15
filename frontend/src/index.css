@@ -39,7 +39,7 @@ h3 {
   align-items: center;
   padding: 50px 0 40px 0;
   margin: auto;
-  border-radius: 50%;
+  border: 50%;
 }
 
 .carousel a {
