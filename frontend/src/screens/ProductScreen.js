@@ -5,6 +5,7 @@ import { Col, Row, ListGroup, Image, Button, Form } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import { Message } from '../components/Message'
 import { Loader } from '../components/Loader'
+import { Meta } from '../components/Meta'
 import {
   listProductDetails,
   createProductReview,
@@ -67,6 +68,7 @@ export const ProductScreen = ({ history, match }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <>
+          <Meta title={product.name} />
           <Row>
             <Col md={6}>
               <Image fluid src={product.image} alt={product.name} />
@@ -94,7 +96,7 @@ export const ProductScreen = ({ history, match }) => {
                   <Row>
                     <Col>Price:</Col>
                     <Col>
-                      <strong>{product.price}</strong>
+                      <strong>${product.price}</strong>
                     </Col>
                   </Row>
                 </ListGroup.Item>
